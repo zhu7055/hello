@@ -1,0 +1,76 @@
+td {
+    padding: 20px;
+}
+
+.photo {
+    width: 100px;
+    float: right;
+    /* 圖片在左邊 */
+    padding: 20px;
+}
+
+.photo img {
+    display: block;
+    width: 100%;
+}
+
+aside,
+article {
+    float: left;
+    border: 1px solid #000;
+    height: 200px;
+    padding: 10px;
+}
+
+
+/* 適用於手機 */
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        /* 網頁容器佔滿螢幕寬度 */
+    }
+    .image {
+        width: 100%;
+        /* 圖片佔滿螢幕寬度 */
+    }
+}
+
+
+/* 適用於平板 */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 80%;
+        /* 網頁容器寬度減少 */
+    }
+    .image {
+        width: 50%;
+        /* 圖片寬度減少 */
+    }
+}
+
+
+/* 適用於桌機 */
+
+@media screen and (min-width: 1025px) {
+    .container {
+        width: 60%;
+        /* 網頁容器寬度減少 */
+    }
+    .image {
+        width: 30%;
+        /* 圖片寬度減少 */
+    }
+}
+
+.contact div {
+    height: fit-content;
+    width: fit-content;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
