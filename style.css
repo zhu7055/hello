@@ -1,3 +1,111 @@
+
+body {
+    margin: 0;
+    /* 移除瀏覽器預設的 body 外邊距 */
+    padding: 0;
+    /* 移除瀏覽器預設的 body 內邊距 */
+    /* 為固定導覽列預留空間：這個值應該比 nav 的最終高度稍大 */
+    padding-top: 70px;
+    /* 假設導覽列最終高度約 60px，給 70px 留出間距 */
+    font-family: Arial, sans-serif;
+    /* 設定一個基本的字體 */
+    line-height: 1.6;
+    /* 更好的閱讀體驗 */
+    color: #333;
+    /* 文字顏色 */
+}
+/* 導覽列容器的樣式 */
+
+nav {
+    /* 新增：為 nav 元素本身添加樣式，而不是直接給 nav ul */
+    background-color: #2C3E50;
+    /* 導覽列的背景色 */
+    padding: 10px 0;
+    /* 給 nav 一點垂直內距，讓導覽列看起來更舒適 */
+    width: 100%;
+    /* 確保導覽列佔滿整個寬度 */
+    position: fixed;
+    /* 讓導覽列固定在視窗頂部，不隨滾動條移動 */
+    top: 0;
+    /* 固定在頂部 */
+    left: 0;
+    /* 固定在左側 */
+    z-index: 1000;
+    /* 確保導覽列在所有其他內容之上 */
+    box-sizing: border-box;
+    /* 確保 padding 不會增加寬度 */
+    height: auto;
+    /* 讓高度根據內容自動調整 */
+}
+
+nav ul {
+    list-style: none;
+    /* 移除預設的項目符號 (點) */
+    margin: 0;
+    /* 重置預設外邊距 */
+    padding: 0;
+    /* 重置預設內距 */
+    display: flex;
+    /* 關鍵：讓 li 元素橫向排列 */
+    justify-content: center;
+    /* 讓導覽列項目水平居中 */
+    align-items: center;
+    /* 讓導覽列項目垂直居中 */
+}
+
+
+/* 每個列表項目的樣式 */
+
+nav ul li {
+    margin: 0 15px;
+    /* 上下邊距為 0，左右邊距為 15px，在項目之間添加間距 */
+}
+
+
+/* 連結的樣式 */
+
+nav ul li a {
+    text-decoration: none;
+    /* 移除連結的底線 */
+    color: #FFFFFF;
+    /* 設定文字顏色為紫色 (與圖片一致) */
+    padding: 5px 0;
+    /* 調整內距，因為 nav 已經有 padding 了 */
+    display: block;
+    /* 讓整個連結區域都可點擊 */
+}
+
+
+/* 連結在滑鼠懸停時的樣式 */
+
+nav ul li a:hover {
+    text-decoration: underline;
+    /* 滑鼠懸停時顯示底線 */
+}
+
+
+/* ==================================== */
+
+
+/* 錨點跳轉偏移解決方案          */
+
+
+/* 最推薦的方法，使用 scroll-margin-top */
+
+
+/* 對所有帶有 id 的標題（例如 h1, h2, h3）應用，這些標題通常是錨點的目標 */
+
+h1[id],
+h2[id],
+h3[id],
+h4[id],
+h5[id],
+h6[id] {
+    /* 這個值應該與 body 的 padding-top 相同，
+       確保錨點跳轉後，標題顯示在導覽列下方 */
+    scroll-margin-top: 70px;
+}
+
 td {
     padding: 20px;
 }
@@ -5,7 +113,8 @@ td {
 .photo {
     width: 100px;
     float: right;
-    /* 圖片在左邊 */
+    /* 將圖片浮動到右邊 */
+    /* 圖片在左邊 的註釋與 float: right 衝突，我假定您希望它在右邊 */
     padding: 20px;
 }
 
@@ -17,11 +126,14 @@ td {
 aside,
 article {
     float: left;
+    /* 注意：float 會脫離文檔流，如果沒有清除浮動會導致佈局問題 */
     border: 1px solid #000;
     height: 200px;
+    /* 固定高度可能導致內容溢出 */
     padding: 10px;
 }
 
+/* 響應式設計               */
 
 /* 適用於手機 */
 
@@ -31,11 +143,21 @@ article {
         /* 網頁容器佔滿螢幕寬度 */
     }
     .image {
+        /* 這裡的 .image 應該是指圖片的容器，而不是圖片本身 */
         width: 100%;
         /* 圖片佔滿螢幕寬度 */
     }
+    /* 在小螢幕下導覽列項目可能會換行，可以考慮讓它垂直排列 */
+    /*
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    */
 }
-
 
 /* 適用於平板 */
 
@@ -57,12 +179,15 @@ article {
     .container {
         width: 60%;
         /* 網頁容器寬度減少 */
+        margin: 0 auto;
+        /* 桌面端容器居中 */
     }
     .image {
         width: 30%;
         /* 圖片寬度減少 */
     }
 }
+
 
 .contact div {
     height: fit-content;
