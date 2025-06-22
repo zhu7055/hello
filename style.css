@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     /* 移除瀏覽器預設的 body 外邊距 */
@@ -14,6 +13,25 @@ body {
     color: #333;
     /* 文字顏色 */
 }
+
+.container {
+    padding-left: 20px;
+    /* 根據需要調整這個值 */
+    padding-right: 20px;
+    /* 可選：也在右側增加空間 */
+    /* 或者使用速記方式設定所有邊： */
+    /* padding: 20px; */
+    /* 為上、右、下、左都增加 20px 的內邊距 */
+    /* padding: 0 20px; */
+    /* 上/下 0px，左/右 20px */
+    /* 可選：設定最大寬度以防止內容在大螢幕上過於延伸 */
+    max-width: 960px;
+    /* 根據你的設計調整 */
+    margin: 0 auto;
+    /* 使容器在頁面中置中 */
+}
+
+
 /* 導覽列容器的樣式 */
 
 nav {
@@ -133,7 +151,9 @@ article {
     padding: 10px;
 }
 
+
 /* 響應式設計               */
+
 
 /* 適用於手機 */
 
@@ -158,6 +178,7 @@ article {
     }
     */
 }
+
 
 /* 適用於平板 */
 
@@ -187,7 +208,6 @@ article {
         /* 圖片寬度減少 */
     }
 }
-
 
 .contact div {
     height: fit-content;
