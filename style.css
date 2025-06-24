@@ -219,3 +219,10 @@ th,
 td {
     border: 1px solid black;
 }
+
+footer {
+    background-color: #2C3E50;
+    /* 導覽列的背景色 */
+    width: 100%;
+    color: #FFFFFF;
+}
