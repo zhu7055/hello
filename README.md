@@ -1,5 +1,6 @@
 # 個人網站
 <p> Copyright © 2025 <a href="https://github.com/zhu7055">jiayi-zhu</a></p>
+
 ## 簡介
 此 Repository 包含了我的個人求職網站的原始碼。本網站旨在展示我作為軟體開發工程師的技能、學術背景、專案經驗以及所獲證書。
 
