@@ -26,7 +26,7 @@ https://github.com/zhu7055/FHIR-EMR
 https://github.com/zhu7055/Personal_Project
 
 ## 聯絡
-如果您有任何問題或合作機會，歡迎通過以下方式聯繫我：
+如果您有任何問題，歡迎通過以下方式聯繫我：
 * **Email**: judy18258@gmail.com
 
 
