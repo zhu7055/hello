@@ -1,7 +1,7 @@
 # 個人網站
-
+<p> Copyright © <a href="https://github.com/zhu7055">jiayi-zhu</a></p>
 ## 簡介
-此 Repository 包含了我的個人求職網站的原始碼。本網站旨在展示我作為軟體開發工程師的技能、學術背景、專案經驗以及所獲證書，以供潛在雇主和招聘人員參考。
+此 Repository 包含了我的個人求職網站的原始碼。本網站旨在展示我作為軟體開發工程師的技能、學術背景、專案經驗以及所獲證書。
 
 ## 網站特點
 * **響應式設計 (Responsive Design)**：網站佈局適應不同裝置（桌面、平板、手機）的螢幕尺寸。
@@ -27,3 +27,5 @@ https://github.com/zhu7055/Personal_Project
 ## 聯絡
 如果您有任何問題或合作機會，歡迎通過以下方式聯繫我：
 * **Email**: judy18258@gmail.com
+
+
