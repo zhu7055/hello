@@ -263,6 +263,28 @@ a:hover {
     font-weight: bold;
 }
 
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes caret {
+    50 % {
+        border-color: transparent;
+    }
+}
+
+.software {
+    font: bold 100% Consolas, Monaco, monospace;
+    width: 46ch;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    border-right: .05em solid white;
+    animation: typing 6s steps(46), caret 1s steps(1) infinite;
+}
+
 
 /* 針對 table 在小螢幕上的響應式調整 */
 
@@ -301,3 +323,6 @@ a:hover {
         /* 避免圖片與文字基線對齊問題 */
     }
 }
+
+
+/* 避免圖片與文字基線對齊問題 */
