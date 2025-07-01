@@ -1,10 +1,12 @@
 body {
     margin: 0;
     padding: 0;
-    padding-top: 70px; /* 為固定導覽列預留空間 */
+    padding-top: 70px;
+    /* 為固定導覽列預留空間 */
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #FFFFFF;
+    background: gray;
 }
 
 .container {
@@ -14,7 +16,9 @@ body {
     margin: 0 auto;
 }
 
+
 /* 導覽列容器的樣式 */
+
 nav {
     background-color: #2C3E50;
     padding: 10px 0;
@@ -36,24 +40,30 @@ nav ul {
        並在滾動時顯示更多項目。如果項目較少時仍希望居中，可以用媒體查詢處理。
        align-items: center; 仍然保留，用於垂直居中。*/
     align-items: center;
-
     /* 新增：水平滾動的關鍵屬性 */
-    overflow-x: auto; /* 當內容超出容器時，允許水平滾動 */
-    -webkit-overflow-scrolling: touch; /* 改善 iOS 裝置上的滾動流暢度 */
-    white-space: nowrap; /* 確保所有 li 元素都在同一行，不換行 */
-
+    overflow-x: auto;
+    /* 當內容超出容器時，允許水平滾動 */
+    -webkit-overflow-scrolling: touch;
+    /* 改善 iOS 裝置上的滾動流暢度 */
+    white-space: nowrap;
+    /* 確保所有 li 元素都在同一行，不換行 */
     /* 選用：隱藏滾動條（僅在需要時使用，可提升視覺美觀但可能降低可發現性） */
-    scrollbar-width: none; /* For Firefox */
-    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    scrollbar-width: none;
+    /* For Firefox */
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
 }
 
+
 /* For Chrome, Safari and Opera (隱藏滾動條) */
+
 nav ul::-webkit-scrollbar {
     display: none;
 }
 
 
 /* 每個列表項目的樣式 */
+
 nav ul li {
     /* 這裡的 margin 可以保持，它會在項目之間提供空間 */
     margin: 0 15px;
@@ -63,6 +73,7 @@ nav ul li {
 
 
 /* 連結的樣式 */
+
 nav ul li a {
     text-decoration: none;
     color: #FFFFFF;
@@ -72,12 +83,17 @@ nav ul li a {
 
 
 /* 連結在滑鼠懸停時的樣式 */
+
 nav ul li a:hover {
     text-decoration: underline;
 }
 
+
 /* ==================================== */
+
+
 /* 錨點跳轉偏移解決方案 */
+
 h1[id],
 h2[id],
 h3[id],
@@ -106,59 +122,75 @@ aside,
 article {
     float: left;
     border: 1px solid #000;
-    height: 200px; /* 固定高度可能導致內容溢出 */
+    height: 200px;
+    /* 固定高度可能導致內容溢出 */
     padding: 10px;
 }
 
 
 /* 響應式設計 */
+
+
 /* 適用於手機 */
+
 @media screen and (max-width: 768px) {
     .container {
         width: 100%;
     }
     /* 您在 HTML 中沒有 .image 類別，這裡假設您指的是 .photo img */
     .photo {
-        width: 100%; /* 圖片容器佔滿螢幕寬度 */
-        float: none; /* 在小螢幕上取消浮動，讓圖片獨佔一行或按流動排版 */
-        margin: 0 auto; /* 居中圖片容器 */
+        width: 100%;
+        /* 圖片容器佔滿螢幕寬度 */
+        float: none;
+        /* 在小螢幕上取消浮動，讓圖片獨佔一行或按流動排版 */
+        margin: 0 auto;
+        /* 居中圖片容器 */
     }
     .photo img {
-        width: 100%; /* 圖片佔滿容器寬度 */
+        width: 100%;
+        /* 圖片佔滿容器寬度 */
     }
-
     /* 調整 aside 和 article 的佈局，使其在小螢幕下堆疊顯示 */
     aside,
     article {
-        float: none; /* 取消浮動 */
-        width: 100%; /* 佔滿整行 */
-        height: auto; /* 高度自動適應內容 */
-        margin-bottom: 20px; /* 增加間距 */
+        float: none;
+        /* 取消浮動 */
+        width: 100%;
+        /* 佔滿整行 */
+        height: auto;
+        /* 高度自動適應內容 */
+        margin-bottom: 20px;
+        /* 增加間距 */
     }
-
     /* 確保導覽列在手機上是水平滾動的，這部分已經在 nav ul 裡設定了，但可以再次確認或做微調 */
     nav ul {
-        justify-content: flex-start; /* 讓項目從左邊開始，更適合滾動 */
-        padding-left: 15px; /* 給最左邊的項目一點空間，避免貼邊 */
-        padding-right: 15px; /* 給最右邊的項目一點空間 */
+        justify-content: flex-start;
+        /* 讓項目從左邊開始，更適合滾動 */
+        padding-left: 15px;
+        /* 給最左邊的項目一點空間，避免貼邊 */
+        padding-right: 15px;
+        /* 給最右邊的項目一點空間 */
     }
 }
 
 
 /* 適用於平板 */
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .container {
-        width: 90%; /* 稍微增加寬度以利用平板空間 */
+        width: 90%;
+        /* 稍微增加寬度以利用平板空間 */
     }
     /* 假設 .image 再次指的是 .photo */
     .photo {
-        width: 40%; /* 平板上圖片寬度適中 */
-        float: right; /* 保持浮動 */
+        width: 40%;
+        /* 平板上圖片寬度適中 */
+        float: right;
+        /* 保持浮動 */
     }
     .photo img {
         width: 100%;
     }
-
     aside,
     article {
         /* 您原始代碼中這裡沒有 aside/article 的寬度設定，
@@ -170,22 +202,27 @@ article {
 
 
 /* 適用於桌機 */
+
 @media screen and (min-width: 1025px) {
     .container {
-        width: 960px; /* 回歸到您的最大寬度 */
+        width: 960px;
+        /* 回歸到您的最大寬度 */
         margin: 0 auto;
     }
     /* 假設 .image 再次指的是 .photo */
     .photo {
-        width: 100px; /* 桌面版圖片寬度 */
-        float: right; /* 保持浮動 */
+        width: 100px;
+        /* 桌面版圖片寬度 */
+        float: right;
+        /* 保持浮動 */
     }
     .photo img {
         width: 100%;
     }
     /* 確保導覽列項目在大螢幕上可以居中顯示 */
     nav ul {
-        justify-content: center; /* 桌面版可以居中 */
+        justify-content: center;
+        /* 桌面版可以居中 */
         padding-left: 0;
         padding-right: 0;
     }
@@ -199,39 +236,68 @@ article {
 table,
 th,
 td {
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
 footer {
     background-color: #2C3E50;
     width: 100%;
     color: #FFFFFF;
-    text-align: center; /* 讓版權資訊居中 */
-    padding: 15px 0; /* 增加底部空間 */
+    text-align: center;
+    /* 讓版權資訊居中 */
+    /*padding: 15px 0;*/
+    /* 增加底部空間 */
 }
 
+a {
+    color: #FFD700;
+    font-weight: normal;
+    transition: font-weight 0.3s ease;
+    /*為字變化添加過渡*/
+}
+
+a:hover {
+    color: aqua;
+    transform: scale(1.05);
+    /*放大5%*/
+    font-weight: bold;
+}
+
+
 /* 針對 table 在小螢幕上的響應式調整 */
+
+
 /* 讓表格在小螢幕上可以水平滾動 */
+
 @media screen and (max-width: 768px) {
     /* 包裹 table 的容器 */
     .table-responsive {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        margin-bottom: 20px; /* 增加間距 */
+        margin-bottom: 20px;
+        /* 增加間距 */
     }
     table {
-        width: 100%; /* 確保表格可以填滿容器 */
-        border-collapse: collapse; /* 移除雙邊框 */
-        min-width: 600px; /* 設置一個最小寬度，以確保在小螢幕上仍能滾動顯示內容 */
+        width: 100%;
+        /* 確保表格可以填滿容器 */
+        border-collapse: collapse;
+        /* 移除雙邊框 */
+        min-width: 600px;
+        /* 設置一個最小寬度，以確保在小螢幕上仍能滾動顯示內容 */
     }
-    th, td {
-        white-space: nowrap; /* 確保內容不換行，避免擠壓 */
-        padding: 10px; /* 調整內邊距 */
+    th,
+    td {
+        white-space: nowrap;
+        /* 確保內容不換行，避免擠壓 */
+        padding: 10px;
+        /* 調整內邊距 */
     }
     /* 針對某些圖片可能過大的問題，尤其是 google_cloud/skill.jpg */
     table img {
-        max-width: 100px; /* 限制圖片最大寬度 */
+        max-width: 100px;
+        /* 限制圖片最大寬度 */
         height: auto;
-        display: block; /* 避免圖片與文字基線對齊問題 */
+        display: block;
+        /* 避免圖片與文字基線對齊問題 */
     }
 }
