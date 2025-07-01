@@ -6,7 +6,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #FFFFFF;
-    background: black;
+    background: gray;
 }
 
 .container {
@@ -14,10 +14,6 @@ body {
     padding-right: 20px;
     max-width: 960px;
     margin: 0 auto;
-}
-
-.languages {
-    background: white;
 }
 
 
