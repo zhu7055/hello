@@ -263,6 +263,22 @@ a:hover {
     font-weight: bold;
 }
 
+
+/*li:hover {
+    color: #ff9900;*/
+
+
+/* 變成亮橙色 */
+
+
+/*cursor: pointer;*/
+
+
+/* 同時讓鼠標變成手型，提示可互動 */
+
+
+/*}*/
+
 @keyframes typing {
     from {
         width: 0;
@@ -324,5 +340,23 @@ a:hover {
     }
 }
 
+.back-to-top-btn {
+    display: inline-block;
+    /* 讓它像區塊元素一樣可以設定寬高，但保持在行內 */
+    padding: 10px 20px;
+    background-color: #007bff;
+    /* 藍色背景 */
+    color: white;
+    /* 白色文字 */
+    text-decoration: none;
+    /* 移除下劃線 */
+    border-radius: 5px;
+    /* 圓角 */
+    transition: background-color 0.3s ease;
+    /* 平滑過渡效果 */
+}
 
-/* 避免圖片與文字基線對齊問題 */
+.back-to-top-btn:hover {
+    background-color: #0056b3;
+    /* 鼠標懸停時顏色變深 */
+}
