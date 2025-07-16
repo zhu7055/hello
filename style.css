@@ -5,8 +5,8 @@ body {
     /* 為固定導覽列預留空間 */
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: white;
+    color: #FFFFFF;
+    background: gray;
 }
 
 .container {
@@ -236,7 +236,7 @@ article {
 table,
 th,
 td {
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
 footer {
