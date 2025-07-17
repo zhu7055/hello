@@ -5,8 +5,8 @@ body {
     /* 為固定導覽列預留空間 */
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #FFFFFF;
-    background: gray;
+    color: black;
+    background: white;
 }
 
 .container {
@@ -236,7 +236,7 @@ article {
 table,
 th,
 td {
-    border: 1px solid white;
+    border: 1px solid black;
 }
 
 footer {
@@ -250,7 +250,7 @@ footer {
 }
 
 a {
-    color: #FFD700;
+    color: blueviolet;
     font-weight: normal;
     transition: font-weight 0.3s ease;
     /*為字變化添加過渡*/
@@ -344,7 +344,7 @@ a:hover {
     display: inline-block;
     /* 讓它像區塊元素一樣可以設定寬高，但保持在行內 */
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: rgb(255, 242, 2);
     /* 藍色背景 */
     color: white;
     /* 白色文字 */
